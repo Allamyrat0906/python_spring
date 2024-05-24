@@ -1,0 +1,16 @@
+ {% extends 'base.html' %}
+
+{%block title %} {{m_name}}{%endblock%}
+
+{% block content%}
+<h1> WELCOME Months week !!</h1>
+<ul>
+    {% for x in months%}
+    <li>
+    <a href="{% url 'singleValue' x %}" >{{x}}</a>
+    {% endfor %}
+
+    {{get_data}}
+</li>
+</ul>
+{%endblock%}
